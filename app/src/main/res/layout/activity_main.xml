@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:text="Network Type Required: "
+        android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+
+    <RadioGroup
+        android:id="@+id/networkOptions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/no_network"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="None" />
+
+        <RadioButton
+            android:id="@+id/any_network"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Any" />
+
+        <RadioButton
+            android:id="@+id/wifi_network"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Wifi" />
+
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:text="Requires: "
+        android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:orientation="horizontal">
+
+        <Switch
+            android:id="@+id/idle_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Device Idle" />
+
+        <Switch
+            android:id="@+id/charging_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Device Charging" />
+
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="4dp"
+        android:onClick="scheduleJob"
+        android:text="Schedule Job" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="4dp"
+        android:onClick="cancelJob"
+        android:text="Cancel Job" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="4dp">
+
+        <TextView
+            android:id="@+id/seek_bar_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Override Deadline"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+
+        <TextView
+            android:id="@+id/seek_bar_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Not set"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+    </LinearLayout>
+
+    <SeekBar
+        android:id="@+id/seek_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp" />
+
+
+</LinearLayout>
